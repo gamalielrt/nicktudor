@@ -46,6 +46,8 @@ body {
 
     background: url("assets/homepage/homepage_01.jpg") no-repeat center fixed;     
     background-size: cover;
+    background-attachment: scroll;
+
 
     opacity: 100%;
 }
