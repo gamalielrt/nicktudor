@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'ColumbaTextRegularPro';
+    src:  url('columba-text-regular-pro.woff2') format('woff2')
+}
+
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    color: black;
+    font-size: 16px;
+    background-color: #faf7ed;
+    font-family: ColumbaTextRegularPro;
+    height: 100%;
+
+}
+
+#startlogo {
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#startlogoLOGOimage {
+    width: 360px;
+    position:absolute;
+    top: calc(50% - 180px);
+
+}
+
+#startlogoNICKTUDORimage {
+    width: 300px;
+}
+
+
+#slideshowdiv {
+    width: 100%;
+    height: 100%;
+
+    background: url("assets/homepage/homepage_01.jpg") no-repeat center fixed;     
+    background-size: cover;
+
+    opacity: 100%;
+}
+
+#homepage {
+    width: 100%;
+    height: 100%;
+
+}
+#homepagecontent {
+    color: #e52421;
+    font-size: 14px;
+
+    padding: 20%;
+    text-align: justify;
+
+
+}
+
+#homepageNICKTUDOR {
+    width:100%;
+    text-align: center;
+}
+
+#homepageLOGO {
+    width:100%;
+    text-align: center;
+
+}
+
+
+#homepageNICKTUDORimage {
+    width: 150px;
+    left:200px;
+    
+}
+
+#homepageLOGOimage {
+    width: 75px;
+}
+
+
+/* ---------  MENU ---------  */
+
+#menubar {
+    width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    text-align: center;
+
+}
+
+#menubarcontent {
+    position: relative;
+}
+#menubarlogo {
+    margin-top:20px;
+    width: 150px;
+}
+
+#menuicon {
+    width: 40px;
+    position: absolute;
+    right:4px;
+    top:4px;
+
+
+}
+
+/* ---------  PROJECTS ---------  */
+
+
+.project {
+    width: 100%;
+}
+
+.projectimage {
+    width: 100%;
+}
+
+/* ---------  SUSTAINABILITY ---------  */
+
+
+#sustainabilitypage {
+    width: 100%;
+    height: 100vh;
+    background-color: #9e9c59;
+    position: relative;
+
+
+}
+
+#sustainabilityimage {
+    width: 250px;
+    margin:auto;
+    transform: scaleX(-1);
+    position: absolute;
+    left: calc(50% - 130px);
+    top: calc(50% - 180px);
+
+
+}
+
+/* ---------  INFO ---------  */
+
+
+#infopage {
+    width: 100%;
+    height: 100vh;
+    font-size: 13px;
+
+    background-color: #473416;
+    color: #faf7ed;
+
+    position: relative;
+}
+
+#infocontent {
+    padding: 4%;
+    padding-top: 150px;
+    font-size: 15px;
+    position: relative;
+    
+}
+
+#infoslideshow {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+#infotext1 {
+    width: 70%;
+}
+
+#infoillustration {
+    width: 150px;
+    transform: scaleX(-1);
+    position:absolute;
+    right:60px;
+    bottom:80px;
+
+}
+
+#infotext2 {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    width: 200px;
+}
+
+
+
+
+
