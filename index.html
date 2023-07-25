@@ -69,7 +69,12 @@
 
                 <div id="infopage">
                     <div id = "infocontent">
-                        <img id="infoslideshow" src="assets/info/info_01.jpeg">
+                        <div id = "infoslideshowwrap">
+                            <div id = "infoslideshowcontainer">
+                                <img id="infoslideshow" src="assets/info/info_01.jpeg">
+                            </div>
+                        </div>
+
                         <p id = "infotext1">I spend most of my week in my workshop based on the Dengie Peninsula, Essex. An hour and a half from London, visits can be arranged by appointment. 
                             <br><br>
                             For enquires please contact:
@@ -122,7 +127,7 @@
                 mainsite.style.height = projects.offsetHeight + sustainabilitypage.offsetHeight + infopage.offsetHeight + 'px';
             }
 
-            setTimeout(resizeMainsite,1000);
+            setInterval(resizeMainsite,1000);
 
 
 
