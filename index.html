@@ -12,13 +12,15 @@
 
         <div id = "slideshowdiv">
             <div id = "slideshow">
-                <div id = "startlogo">
-                    <img id="startlogoLOGOimage" src="assets/logos/NICK-TUDOR-LOGO-OFF-WHITE.png">
 
-                </div>
-
-                <div id = "homepage_01"><img class = "slideshowimage"></div>
             </div>
+        </div>
+
+        <div id = "landingpage">
+            <div id = "startlogo">
+                <img id="startlogoLOGOimage" src="assets/logos/NICK-TUDOR-LOGO-OFF-WHITE.png">
+            </div>
+
         </div>
 
 
@@ -40,57 +42,87 @@
                 </div>
             </div>
 
-            <div id="projects">
-                <div id ="project1" class ="project"><img class ="projectimage" src ="assets/projects/P01MartinsLane/1.jpg"></div>
-                <div id ="project2" class ="project"><img class ="projectimage" src ="assets/projects/P02ADLARD/1.jpg"></div>
-                <div id ="project3" class ="project"><img class ="projectimage" src ="assets/projects/P03BrightsideCabinets/1.jpg"></div>
-                <div id ="project4" class ="project"><img class ="projectimage" src ="assets/projects/P04FrenchCurve/01.jpg"></div>
-                <div id ="project5" class ="project"><img class ="projectimage" src ="assets/projects/P05HouseofVoltaire/1.jpg"></div>
-                <div id ="project6" class ="project"><img class ="projectimage" src ="assets/projects/P06BrightsideWardrobe/1.jpg"></div>
-                <div id ="project7" class ="project"><img class ="projectimage" src ="assets/projects/P07MikeShow/1.jpeg"></div>
-                <div id ="project8" class ="project"><img class ="projectimage" src ="assets/projects/P08StudioVoltaire/1.jpg"></div>
-
-
-            </div>
-
-            <div id="sustainabilitypage">
-                <div id="sustainabilitycontent">
-                    <img id = "sustainabilityimage" src = "assets/illustrations/SAWING-1White.png">
-                </div>
-
-            </div>
-
-            <div id="infopage">
-                <div id = "infocontent">
-                    <img id="infoslideshow" src="assets/info/info_01.jpeg">
-                    <p id = "infotext1">I spend most of my week in my workshop based on the Dengie Peninsula, Essex. An hour and a half from London, visits can be arranged by appointment. 
-                        <br><br>
-                        For enquires please contact:
-                        <br>
-                        e: info@nick-tudor.com
-                        <br>
-                        t: +44 (0) 7769 553127
-                        <br><br>
-                        Registered business address:
-                        <br>
-                        33 Yarnfield Square
-                        London
-                        SE15 5JD</p>
-
-                </div>
-                <img id="infoillustration" src = "assets/illustrations/SAWING-1White.png">
-                <p id = "infotext2">© Nick Tudor 2023
-                    <br>
-                    Identity: Leomi Sadler
-                    <br>
-                    Website: Gamaliel Rendle Traynor</p>
-
-
-            </div>
-
         </div>
 
+
+            <div id = "mainsitecontent">
+
+                <div id="projects">
+                    <div id ="project1" class ="project"><img class ="projectimage" src ="assets/projects/P01MartinsLane/1.jpg"></div>
+                    <div id ="project2" class ="project"><img class ="projectimage" src ="assets/projects/P02ADLARD/1.jpg"></div>
+                    <div id ="project3" class ="project"><img class ="projectimage" src ="assets/projects/P03BrightsideCabinets/1.jpg"></div>
+                    <div id ="project4" class ="project"><img class ="projectimage" src ="assets/projects/P04FrenchCurve/01.jpg"></div>
+                    <div id ="project5" class ="project"><img class ="projectimage" src ="assets/projects/P05HouseofVoltaire/1.jpg"></div>
+                    <div id ="project6" class ="project"><img class ="projectimage" src ="assets/projects/P06BrightsideWardrobe/1.jpg"></div>
+                    <div id ="project7" class ="project"><img class ="projectimage" src ="assets/projects/P07MikeShow/1.jpeg"></div>
+                    <div id ="project8" class ="project"><img class ="projectimage" src ="assets/projects/P08StudioVoltaire/1.jpg"></div>
+
+
+                </div>
+
+                <div id="sustainabilitypage">
+                    <div id="sustainabilitycontent">
+                        <img id = "sustainabilityimage" src = "assets/illustrations/SAWING-1White.png">
+                    </div>
+
+                </div>
+
+                <div id="infopage">
+                    <div id = "infocontent">
+                        <img id="infoslideshow" src="assets/info/info_01.jpeg">
+                        <p id = "infotext1">I spend most of my week in my workshop based on the Dengie Peninsula, Essex. An hour and a half from London, visits can be arranged by appointment. 
+                            <br><br>
+                            For enquires please contact:
+                            <br>
+                            e: info@nick-tudor.com
+                            <br>
+                            t: +44 (0) 7769 553127
+                            <br><br>
+                            Registered business address:
+                            <br>
+                            33 Yarnfield Square
+                            London
+                            SE15 5JD</p>
+
+                    </div>
+                    <img id="infoillustration" src = "assets/illustrations/SAWING-1White.png">
+                    <p id = "infotext2">© Nick Tudor 2023
+                        <br>
+                        Identity: Leomi Sadler
+                        <br>
+                        Website: Gamaliel Rendle Traynor</p>
+
+
+                </div>
+            </div>
+
+
         <script>
+
+            var mainsite = document.getElementById("mainsite");
+            var mainsitecontent = document.getElementById("mainsitecontent");
+
+            var projects = document.getElementById("projects");
+            var sustainabilitypage = document.getElementById("sustainabilitypage");
+            var infopage = document.getElementById("infopage");
+
+
+            function resizeMainsite () {
+
+                console.log(projects.scrollHeight);
+                console.log(sustainabilitypage.offsetHeight)
+                console.log(infopage.offsetHeight)
+
+
+
+                console.log(projects.offsetHeight + sustainabilitypage.offsetHeight + infopage.offsetHeight)
+                console.log(mainsitecontent.offsetHeight);
+
+
+                mainsite.style.height = projects.offsetHeight + sustainabilitypage.offsetHeight + infopage.offsetHeight + 'px';
+            }
+
+            setTimeout(resizeMainsite,1000);
 
 
 
