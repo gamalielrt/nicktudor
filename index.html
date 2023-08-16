@@ -9,6 +9,8 @@
 
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>    </head>
+
 
         <div id = "slideshowdiv">
             <div id = "slideshow">
@@ -25,10 +27,10 @@
 
 
         <div id = "homepage">
-            <div id="homepagecontent">
-                <div id="homepageNICKTUDOR"><img id="homepageNICKTUDORimage" src="assets/logos/NICK-TUDOR-YELLOW.svg"></div>
+            <div id="homepagecontent" class = "card">
+                <div id="homepageNICKTUDOR"><img id="homepageNICKTUDORimage" src="assets/logos/NICK-TUDOR-RED.png"></div>
                 <p>I’m a designer and carpenter based in London and Essex. I design and make bespoke furniture, buildings, architectural features, and collaborate with other architects, artists, designers and private clients, to realise projects of various scales. My work can be found in museums, galleries and other public institutions in addition to domestic settings.</p> 
-                <div id="homepageLOGO"><img id="homepageLOGOimage" src="assets/logos/FACE-RED.svg"></div>
+                <div id="homepageLOGO"><img id="homepageLOGOimage" src="assets/logos/FACE-RED.png"></div>
                 <p>I am driven by a desire to contribute positive change in the built environment; to create sustainable outcomes of lasting quality. </p>
             </div>
         </div>
@@ -38,7 +40,14 @@
             <div id = "menubar">
                 <div id = "menubarcontent">
                     <img id = "menubarlogo" src = "assets/logos/NICK-TUDOR-YELLOW.png">
-                    <img id = "menuicon" src = "assets/menu_icon2.svg">
+                    <div id = "menuicon" >
+                        <div id="hamburgericon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -48,7 +57,9 @@
             <div id = "mainsitecontent">
 
                 <div id="projects">
-                    <div id ="project1" class ="project"><img class ="projectimage" src ="assets/projects/P01MartinsLane/1.jpg"></div>
+
+                    <div id="projectscontainer"></div>
+                    <!--
                     <div id ="project2" class ="project"><img class ="projectimage" src ="assets/projects/P02ADLARD/1.jpg"></div>
                     <div id ="project3" class ="project"><img class ="projectimage" src ="assets/projects/P03BrightsideCabinets/1.jpg"></div>
                     <div id ="project4" class ="project"><img class ="projectimage" src ="assets/projects/P04FrenchCurve/01.jpg"></div>
@@ -56,6 +67,7 @@
                     <div id ="project6" class ="project"><img class ="projectimage" src ="assets/projects/P06BrightsideWardrobe/1.jpg"></div>
                     <div id ="project7" class ="project"><img class ="projectimage" src ="assets/projects/P07MikeShow/1.jpeg"></div>
                     <div id ="project8" class ="project"><img class ="projectimage" src ="assets/projects/P08StudioVoltaire/1.jpg"></div>
+                    -->
 
 
                 </div>
@@ -106,33 +118,106 @@
 
             var mainsite = document.getElementById("mainsite");
             var mainsitecontent = document.getElementById("mainsitecontent");
-
+            var homepagecontent = document.getElementById("homepagecontent");
             var projects = document.getElementById("projects");
+            var projectscontainer = document.getElementById("projectscontainer");
             var sustainabilitypage = document.getElementById("sustainabilitypage");
             var infopage = document.getElementById("infopage");
 
 
-            function resizeMainsite () {
 
-                console.log(projects.scrollHeight);
-                console.log(sustainabilitypage.offsetHeight)
-                console.log(infopage.offsetHeight)
+            var deviceType = ''; 
+
+            function detectScreenWidth () {
+                if (window.innerWidth > 550) {
+                    deviceType = 'computer';
+                    homepagecontent.style.fontSize = '18px'
+                    homepagecontent.style.paddingTop = '15%';
+                    document.getElementById("homepageNICKTUDORimage").style.width = '150px';
+                    document.getElementById("homepageLOGOimage").style.width = '140px';
+                    document.getElementById("menubarlogo").style.width = '180px';
 
 
 
-                console.log(projects.offsetHeight + sustainabilitypage.offsetHeight + infopage.offsetHeight)
-                console.log(mainsitecontent.offsetHeight);
+                } else {
+                    deviceType = 'phone';
+                    homepagecontent.style.fontSize = '14px'
+                    homepagecontent.style.paddingTop = '20%';
+
+                    document.getElementById("homepageNICKTUDORimage").style.width = '150px';
+                    document.getElementById("homepageLOGOimage").style.width = '100px';
+                    document.getElementById("menubarlogo").style.width = '140px';
 
 
-                mainsite.style.height = projects.offsetHeight + sustainabilitypage.offsetHeight + infopage.offsetHeight + 'px';
+                }
+                console.log(deviceType);
             }
 
-            setInterval(resizeMainsite,1000);
+
+
+            function resizeMainsite () { 
+                mainsite.style.height = projectscontainer.offsetHeight + sustainabilitypage.offsetHeight + infopage.offsetHeight + 'px';
+
+                detectScreenWidth();
+            }
+
+
+            window.addEventListener("resize", resizeMainsite);
+
+
+            $(document).ready(function(){
+                $('#hamburgericon').click(function(){
+                    $(this).toggleClass('open');
+                });
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*$(document).ready(function(){
+	
+                $(window).on('scroll', function(){
+
+                    var wHeight = $(window).height()-500;
+
+                    var scrollTop = $(window).scrollTop();
+
+                    console.log(wHeight, scrollTop, scrollTop-wHeight);
+
+
+                    $('.card').css('transform','translate3d(0px, -'+ (scrollTop-wHeight)  +'px , 0px)');
+                    
+                });
+                
+            });*/
+
+
+
+            
+
+
+            
+
+
+
+
 
 
 
 
         </script>
+
+        <script src="./projects.js"></script>
+
 
         
     </body>
