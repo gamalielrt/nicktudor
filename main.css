@@ -6,6 +6,7 @@
 
 html {
     height: 100vh;
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -15,6 +16,11 @@ body {
     background-color: #faf7ed;
     font-family: ColumbaTextRegularPro;
     height: 100%;
+
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+
+
 
 }
 
@@ -43,6 +49,8 @@ body {
 
 #landingpage {
     height: 100%;
+
+
 }
 
 #startlogo {
@@ -64,10 +72,15 @@ body {
 
 #startlogoNICKTUDORimage {
     width: 300px;
+    
 }
 
 
 #slideshowdiv {
+
+    /*scroll-snap-align: start;*/
+
+
     width: 100%;
     height: 100%;
 
@@ -104,9 +117,16 @@ body {
 /* ---------  HOMEPAGE ---------  */
 
 #homepage {
+
+    /*scroll-snap-align: start;*/
+
+
     width: 100%;
     height: 100%;
     background-color: #faf7ed;
+
+
+
 
 }
 #homepagecontent {
@@ -165,26 +185,35 @@ body {
 
 
 
-/* ---------  MENU ---------  */
+/* ---------  MENUBAR ---------  */
 
 #menubar {
     width: 100%;
+    height: 100vh;
     /*position: -webkit-sticky;*/ /* Safari */
     position: sticky;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     text-align: center;
+
+    overflow-x: hidden;
+
 
     
 
 }
 
 #menubarcontent {
-    position: relative;
+    position: absolute;
+    width:100%;
+    z-index: 4;
+
+    /*background-color: #9e9c59;*/
 }
 #menubarlogo {
-    margin-top:20px;
+    padding-top:20px;
     width: 150px;
+    margin: auto;
 }
 
 #menuicon {
@@ -195,6 +224,40 @@ body {
 
 
 
+
+}
+
+
+
+
+/* ---------  MENU ---------  */
+#menu {
+    background-color: #cf82b6;
+    
+    color: #e52421;
+    font-size: 26px;
+    line-height: 2;
+
+    position: absolute;
+    z-index: 2;
+    height:100%;
+    width:400px;
+    right:-400px;
+
+    transition: right 0.5s cubic-bezier(0.0, 0.5, 0.5 ,1.0);
+}
+
+#projectcatagorybtns {
+    padding-top: 40%;
+}
+
+#sustainabilitybtn {
+    padding-top: 40%;
+
+}
+
+#informationbtn {
+    padding-top: 40%;
 
 }
 
@@ -214,6 +277,11 @@ body {
 
 
 #mainsite {
+
+    /*scroll-snap-align: start;*/
+
+
+
     position:absolute;
     width: 100%;
     z-index: 2;
@@ -222,6 +290,8 @@ body {
 
 
 #mainsitecontent {
+
+
     position:absolute;
     z-index: 1;
 }
@@ -278,15 +348,28 @@ body {
 
 
 #sustainabilitypage {
+
+
     width: 100%;
     height: 100vh;
     background-color: #9e9c59;
     position: relative;
 
 
+
+
+}
+
+#sustainabilitycontent {
+
+    /*scroll-snap-align: start;*/
+
+
 }
 
 #sustainabilityimage {
+
+    
     width: 250px;
     margin:auto;
     transform: scaleX(-1);
@@ -334,6 +417,9 @@ body {
     padding-top: 150px;
     font-size: 15px;
     position: relative;
+
+    scroll-snap-type: center;
+
     
     
 }
@@ -403,7 +489,7 @@ body {
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    cursor: pointer;
+    cursor: auto;
   }
   
   #hamburgericon span {

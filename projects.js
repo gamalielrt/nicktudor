@@ -92,7 +92,7 @@ projectList.newProject('004',
                     'frenchcurve_thumb.jpg',
                     'House on Martins Lane <p> Following the erection of an insulated timber frame, I completed the carpentry for all other timber elements of this new build house. The larch cladding required 26,000 nails, each fixed through a pilot hole. I designed and made the canopy and pergola that provides essential solar shade, using complex traditional joints in English grown green douglas fir to demonstrate the discrete level of craft in the building that is otherwise hidden, and to add some visual interest to an otherwise straightforward construction. Other more common items were also completed; door linings, sills, internal stud walls and bathrooms. ',
                     'Furniture',
-                    'full'
+                    'left'
 );
 
 projectList.newProject('005',
@@ -101,7 +101,7 @@ projectList.newProject('005',
                     'houseofvoltaire_thumb.jpg',
                     'House on Martins Lane <p> Following the erection of an insulated timber frame, I completed the carpentry for all other timber elements of this new build house. The larch cladding required 26,000 nails, each fixed through a pilot hole. I designed and made the canopy and pergola that provides essential solar shade, using complex traditional joints in English grown green douglas fir to demonstrate the discrete level of craft in the building that is otherwise hidden, and to add some visual interest to an otherwise straightforward construction. Other more common items were also completed; door linings, sills, internal stud walls and bathrooms. ',
                     'Interior',
-                    'right'
+                    'full'
 );
 
 projectList.newProject('006',
@@ -128,7 +128,7 @@ projectList.newProject('008',
                     'studiovoltaire_thumb.jpg',
                     'House on Martins Lane <p> Following the erection of an insulated timber frame, I completed the carpentry for all other timber elements of this new build house. The larch cladding required 26,000 nails, each fixed through a pilot hole. I designed and made the canopy and pergola that provides essential solar shade, using complex traditional joints in English grown green douglas fir to demonstrate the discrete level of craft in the building that is otherwise hidden, and to add some visual interest to an otherwise straightforward construction. Other more common items were also completed; door linings, sills, internal stud walls and bathrooms. ',
                     'Architecture',
-                    'left'
+                    'right'
 );
 
 
