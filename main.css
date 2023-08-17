@@ -78,7 +78,7 @@ body {
 
 #slideshowdiv {
 
-    /*scroll-snap-align: start;*/
+    scroll-snap-align: start;
 
 
     width: 100%;
@@ -118,7 +118,7 @@ body {
 
 #homepage {
 
-    /*scroll-snap-align: start;*/
+    scroll-snap-align: start;
 
 
     width: 100%;
@@ -321,6 +321,8 @@ body {
 
 .project {
     width: 100%;
+    scroll-snap-align: start;
+
 }
 
 .projectThumbImg {
@@ -362,7 +364,7 @@ body {
 
 #sustainabilitycontent {
 
-    /*scroll-snap-align: start;*/
+    scroll-snap-align: start;
 
 
 }
@@ -410,6 +412,9 @@ body {
     color: #faf7ed;
 
     position: relative;
+
+    scroll-snap-align: start;
+
 }
 
 #infocontent {
