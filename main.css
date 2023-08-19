@@ -82,7 +82,7 @@ body {
 
 
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     background: url("assets/homepage/homepage_01.jpg") no-repeat center fixed;     
     background-size: cover;
