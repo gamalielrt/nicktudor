@@ -81,7 +81,7 @@ body {
     scroll-snap-align: start;
 
 
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 
     background: url("assets/homepage/homepage_01.jpg") no-repeat center fixed;     
